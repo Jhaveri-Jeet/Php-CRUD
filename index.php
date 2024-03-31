@@ -28,8 +28,13 @@
                     address: $('#address').val(),
                     number: $('#number').val()
                 },
-                success: function(data) {
-                    alert(data);
+                success: function(response) {
+                    if (response == 0)
+                        return window.location = './index.php';
+                    else {
+                        alert("Data Inserted Successfully !");
+                        window.location.href = './index.php';
+                    }
                 }
             });
         }

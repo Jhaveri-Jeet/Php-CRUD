@@ -7,7 +7,10 @@ $password = $_POST['password'];
 $address = $_POST['address'];
 $number = $_POST['number'];
 
-$query = "INSERT INTO users (name, password, address, number) VALUES ('$name', '$password', '$address', '$number')";
-$connection->exec($query);
+$query = "INSERT INTO users (name, password, address, number) VALUES (?, ?, ?, ?)";
+$params = [$name, $password, $address, $number];
 
-header('Location: index.php');
+$statement = $connection->prepare($query);
+$data = $statement->execute($params);
+
+echo $data;
