@@ -1,4 +1,4 @@
-# user CRUD Application
+# PHP CRUD Application
 
 This is a simple CRUD (Create, Read, Update, Delete) application for managing user records. It is built using PHP for server-side scripting, AJAX calls for asynchronous communication between the client and server, and PDO (PHP Data Objects) for database connectivity.
 
