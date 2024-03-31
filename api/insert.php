@@ -3,12 +3,12 @@
 include('../includes/init.php');
 
 $name = $_POST['name'];
+$username = $_POST['username'];
+$email = $_POST['email'];
 $password = $_POST['password'];
-$address = $_POST['address'];
-$number = $_POST['number'];
 
-$query = "INSERT INTO users (name, password, address, number) VALUES (?, ?, ?, ?)";
-$params = [$name, $password, $address, $number];
+$query = "INSERT INTO users (name, password, username, email) VALUES (?, ?, ?, ?)";
+$params = [$name, $password, $username, $email];
 
 $statement = $connection->prepare($query);
 $data = $statement->execute($params);
