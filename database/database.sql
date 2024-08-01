@@ -7,7 +7,7 @@ USE `UserDetailsDB`;
 CREATE TABLE
     `Users` (
         `Id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        `Name` VARCHAR(250) NOT NULL,
+        `Username` VARCHAR(250) NOT NULL,
         `Password` VARCHAR(250) NOT NULL
     );
 
