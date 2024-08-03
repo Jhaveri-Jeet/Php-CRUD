@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <form>
+    <form action="./api/insert.php" method="post">
         <input type="text" id="username" />
         <input type="text" id="password" />
-        <input type="button" value="Submit" onclick="insertData()" />
+        <input type="button" value="Submit" onclick="insertData()"/>
     </form>
 
 
@@ -29,13 +29,10 @@
                 type: "POST",
                 data: data,
                 success: function(response) {
-                    alert("Data inserted successfully");
-                    $('#username').val('');
-                    $('#password').val('');
-                    $('#username').focus();
+                    console.log(response.success);
                 },
                 error: function(e) {
-                    console.log('error');
+                    console.log(e);
                 }
             });
         }
