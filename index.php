@@ -41,6 +41,7 @@
                             <td>${response.users[i].Username}</td>
                             <td>${response.users[i].Password}</td>
                             <td><a href="#" onclick='deleteData(${response.users[i].Id})'>Delete</a></td>
+                            <td><a href="./pages/updatePage.php?id=${response.users[i].Id}">Update</a></td>
                         </tr>
                         `
                     }

@@ -1,5 +1,7 @@
 <?php
 
+header("Content-Type: application/json");
+
 require '../includes/connection.php';
 
 $id = $_POST['id'];
@@ -13,6 +15,6 @@ $statement = $connection->prepare($query);
 $row = $statement->execute($params);
 
 if ($row > 0)
-    echo "Successfully Updated !";
+    echo json_encode(['success' => true]);
 else
-    echo "Something went wrong";
+    echo json_encode(['success' => false]);
